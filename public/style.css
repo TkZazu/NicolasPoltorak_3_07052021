@@ -1,0 +1,10 @@
+/********************** font *************************/
+@font-face {
+    font-family: shrikhand;
+    src: url(./font/Shrikhand-Regular.otf);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(./font/Roboto-Black.ttf);
+}
