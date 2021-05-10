@@ -1,0 +1,19 @@
+{
+  "name": "projet3-ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/sass/main.scss:./assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TkZazu/NicolasPoltorak_3_07052021.git"
+  },
+  "author": "NicolasPoltorak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TkZazu/NicolasPoltorak_3_07052021/issues"
+  },
+  "homepage": "https://github.com/TkZazu/NicolasPoltorak_3_07052021#readme"
+}

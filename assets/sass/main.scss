@@ -1,0 +1,45 @@
+@font-face
+{
+    font-family: "shrikhand";
+    src: url(./assets/font/Shrikhand-Regular.ttf);
+}
+@font-face {
+    font-family: "roboto";
+    src: url(./assets/font/Roboto-Regular.ttf);
+}
+body{
+    margin: 0;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .logo_img{
+            width: 50%;
+            margin: 15px 0;
+        }
+    }
+    .en-tete{
+        background-color: #f6f6f6;
+        .location{
+            background-color: #eaeaea;
+            border-top: 2px #cfcfcf solid;
+            display: flex;
+            justify-content: center;
+            padding-right: 25px;
+        }
+        .fas{
+            display: flex;
+            align-items: center;
+            margin: 0 15px 3px 15px;
+        }
+        .location_txt{
+            font-weight: bold;
+            font-family: "shrikhand";
+        }
+    }
+}
+

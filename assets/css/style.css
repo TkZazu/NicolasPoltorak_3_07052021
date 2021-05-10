@@ -1,10 +1,46 @@
-/********************** font *************************/
 @font-face {
-    font-family: shrikhand;
-    src: url(./font/Shrikhand-Regular.otf);
+  font-family: "shrikhand";
+  src: url(./assets/font/Shrikhand-Regular.ttf);
+}
+@font-face {
+  font-family: "roboto";
+  src: url(./assets/font/Roboto-Regular.ttf);
+}
+body {
+  margin: 0;
 }
 
-@font-face {
-    font-family: roboto;
-    src: url(./font/Roboto-Black.ttf);
+header {
+  display: flex;
+  flex-direction: column;
 }
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .logo .logo_img {
+  width: 50%;
+  margin: 15px 0;
+}
+header .en-tete {
+  background-color: #f6f6f6;
+}
+header .en-tete .location {
+  background-color: #eaeaea;
+  border-top: 2px #cfcfcf solid;
+  display: flex;
+  justify-content: center;
+  padding-right: 25px;
+}
+header .en-tete .fas {
+  display: flex;
+  align-items: center;
+  margin: 0 15px 3px 15px;
+}
+header .en-tete .location_txt {
+  font-weight: bold;
+  font-family: "shrikhand";
+}
+
+/*# sourceMappingURL=style.css.map */
