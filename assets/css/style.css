@@ -8,12 +8,14 @@
 }
 body {
   margin: 0;
-  font-family: "roboto-thin";
 }
 
 header {
-  display: flex;
-  flex-direction: column;
+  position: fixed;
+  background-color: white;
+  height: initial;
+  top: 0;
+  left: 0;
 }
 header .logo {
   display: flex;
@@ -24,28 +26,54 @@ header .logo .logo_img {
   width: 50%;
   margin: 15px 0;
 }
-header .en-tete {
-  background-color: #f6f6f6;
+
+.main {
+  margin-top: 60px;
 }
-header .en-tete .location {
+
+.info .en-tete {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.info .en-tete .location {
   background-color: #eaeaea;
   border-top: 2px #cfcfcf solid;
   display: flex;
   justify-content: center;
-  padding-right: 25px;
+  padding-right: 30px;
+  width: 100%;
 }
-header .en-tete .fas {
+.info .en-tete .fas {
   display: flex;
   align-items: center;
   margin: 0 15px 3px 15px;
 }
-header .en-tete .location_txt {
+.info .en-tete .location_txt {
   font-weight: bold;
 }
-header .description {
+.info .description {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
+}
+.info .description .title {
+  font-size: 24px;
+  padding: 0 30px;
+  margin: 25px 0 10px 0;
+}
+.info .description .title-p {
+  margin: 0 0 25px 0;
+}
+.info button {
+  border: 1px transparent solid;
+  background: linear-gradient(350deg, #9356DC, #FF79DA);
+  border-radius: 25px;
+  padding: 15px;
+  color: white;
+  box-shadow: 0px 0px 6px #cfcfcf;
 }
 
 /*# sourceMappingURL=style.css.map */
