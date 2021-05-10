@@ -1,13 +1,14 @@
 @font-face {
   font-family: "shrikhand";
-  src: url(./assets/font/Shrikhand-Regular.ttf);
-}
-@font-face {
+  src: url(../assets/font/Shrikhand-Regular.ttf);
   font-family: "roboto";
-  src: url(./assets/font/Roboto-Regular.ttf);
+  src: url(../assets/font/Roboto-Regular.ttf);
+  font-family: "roboto-thin";
+  src: url(../assets/font/Roboto-Thin.tff);
 }
 body {
   margin: 0;
+  font-family: "roboto-thin";
 }
 
 header {
@@ -40,7 +41,11 @@ header .en-tete .fas {
 }
 header .en-tete .location_txt {
   font-weight: bold;
-  font-family: "shrikhand";
+}
+header .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
