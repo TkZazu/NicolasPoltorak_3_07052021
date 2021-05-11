@@ -83,11 +83,12 @@ header .logo .logo_img {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 20px 0 40px 0;
 }
-.fonctionnement .fonctionnement-txt {
+.fonctionnement .fonctionnement-titre {
   font-family: "roboto";
   font-size: 20px;
-  padding: 20px 0 5px 15px;
+  padding: 0 15px;
 }
 .fonctionnement .nav {
   position: relative;
@@ -136,6 +137,7 @@ header .logo .logo_img {
 .restaurants {
   background-color: #f6f6f6;
   width: 100%;
+  padding: 40px 0;
 }
 .restaurants .menu {
   display: flex;
@@ -148,12 +150,55 @@ header .logo .logo_img {
   height: 250px;
   position: relative;
 }
-.restaurants .menu .img {
-  width: 320px;
-  height: 170px;
+.restaurants .menu .restaurant-img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+.restaurants .menu .restaurant-description {
+  height: 75px;
 }
 .restaurants .menu .new {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 25px;
+  top: 15px;
+  background-color: #99E2D0;
+  color: #008766;
+  font-family: "roboto-light";
+  text-shadow: 2px 2px 4px #39a98e;
+  font-weight: bold;
+  height: 30px;
+  padding: 3px 15px;
+  border-radius: 3px;
+}
+.restaurants .menu .favorite {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 25px;
+  bottom: 25px;
+  color: #969696;
+  font-size: 14px;
+}
+.restaurants .restaurant-titre {
+  font-family: "roboto";
+  font-size: 20px;
+  padding: 0 15px;
+}
+.restaurants .restaurant-p {
+  font-family: "roboto";
+  font-size: 16px;
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.restaurants .restaurant-txt {
+  font-family: "roboto-light";
+  margin-top: 0;
+  margin-left: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
