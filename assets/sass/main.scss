@@ -1,61 +1,68 @@
 $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
+$primaryback: #f6f6f6;
+$secondaryback: #eaeaea;
+
+@mixin shadowbox{
+    border: 0px transparent solid;
+    box-shadow: 3px 3px 8px #e0e0e0,-1px -1px 10px #f1f1f1;
+}
 
 @font-face
 {
     font-family: "shrikhand";
-    src: url(../assets/font/Shrikhand-Regular.ttf);
+    src: url("../font/Shrikhand-Regular.ttf");
     font-family: "roboto";
-    src: url(../assets/font/Roboto-Regular.ttf);
-    font-family: "roboto-thin";
-    src: url(../assets/font/Roboto-Thin.tff)
+    src: url("../font/Roboto-Regular.ttf");
+    font-family: "roboto-light";
+    src: url("../font/Roboto-Light.ttf")
 }
 
 body{
     margin: 0;
 }
 header{
-    position: fixed;
+    display: flex;
+    justify-content: center;
+    position: sticky;
     background-color: white;
-    height: initial;
     top: 0;
     left: 0;
+    height: 60px;
+    width: 100%;
     .logo{
         display: flex;
         align-items: center;
         justify-content: center;
         .logo_img{
-            width: 50%;
+            width: 150px;
             margin: 15px 0;
         }
     }
 }
-.main{
-    margin-top: 60px;
-}
+
 .info{
     .en-tete{
-        background-color: #f6f6f6;
+        background-color: $primaryback;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 30px;
+        padding-bottom: 40px;
         .location{
-            background-color: #eaeaea;
+            background-color: $secondaryback;
             border-top: 2px #cfcfcf solid;
             display: flex;
             justify-content: center;
-            padding-right: 30px;
             width: 100%;
         }
         .fas{
             display: flex;
             align-items: center;
-            margin: 0 15px 3px 15px;
+            margin: 0 15px 3px 0;
         }
         .location_txt{
-            font-weight: bold;
+            font-family: "roboto-light";
         }
     }
     .description{
@@ -66,18 +73,99 @@ header{
             font-size: 24px;
             padding: 0 30px;
             margin: 25px 0 10px 0;
+            font-family: "roboto";
         }
         .title-p{
             margin: 0 0 25px 0;
+            font-family: "roboto-light";
+            color: #353535
         }
     }
     button{
-        border: 1px transparent solid;
         background: linear-gradient(350deg,$primary,$secondary);
-        border-radius: 25px;
-        padding: 15px;
+        padding: 15px 20px;
         color: white;
-        box-shadow: 0px 0px 6px #cfcfcf;
+        @include shadowbox;
+        border-radius: 25px;
+        font-size: 18px;
+        text-shadow:  3px 3px 8px #e0e0e0;
     }
+}
+
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .fonctionnement-txt{
+        font-family: "roboto";
+        font-size: 20px;
+        padding: 20px 0 5px 15px
+    }
+    .nav{
+        position: relative;
+        display: flex;
+        align-items: center;
+        @include shadowbox;
+        border-radius: 15px;
+        background-color: $primaryback;
+        margin: 0 20px 25px 20px;
+            .div-number{
+                position: absolute;
+                left: -10px;
+                    .number{
+                        background-color: $primary;
+                        color: white;
+                        border-radius: 50%;
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: "roboto-light";
+                        font-size: 12px;
+                    }
+            }
+            
+        .fas{
+            color: #7e7e7e;
+            width: 20px;
+            display: flex;
+            justify-content: center;
+            margin: 0 15px 0 20px;
+        }
+        .nav-p{
+            font-family: "roboto";
+            font-size: 16px;
+        }
+    }
+    .nav-pink{
+        background-color: #f5edff;
+        .fas-pink{
+            color: $primary;
+        }
+    }
+}
+
+.restaurants{
+    background-color: $primaryback;
+    width: 100%;
+    .menu{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        @include shadowbox;
+        overflow: hidden;
+        border-radius: 20px;
+        height: 250px;
+        position: relative;
+        .img{
+            width: 320px;
+            height: 170px;
+        }
+        .new{
+            position: absolute;
+        }
+    }
+    
 }
 
