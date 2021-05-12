@@ -24,7 +24,7 @@ $secondaryback: #eaeaea;
             display: flex;
             justify-content: center;
             align-items: center;
-            right: 25px;
+            right: 20px;
             top: 15px;
             background-color: $tertiary;
             color: #008766;
@@ -75,6 +75,7 @@ header{
     left: 0;
     height: 60px;
     width: 100%;
+    z-index: 1;
     .logo{
         display: flex;
         align-items: center;
@@ -226,3 +227,39 @@ header{
     }
 }
 
+.footer{
+    background-color: #353535;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 20px 20px 40px 20px;
+    .logo{
+        margin-bottom: 10px;
+        color: white;
+        .img{
+            width: 100px;
+            height: 15px;
+        }
+    }
+    
+    .bolder{
+        display: flex;
+        align-items: center;
+        .fa-utensils{
+            width: 15px;
+        }
+        .bolder-txt{
+            font-family: "roboto-light";
+            font-size: 14px;
+            margin: 5px 10px;
+            font-weight: bold;
+        }
+    }
+    .light{
+        font-family: "roboto-light";
+        font-size: 14px;
+        .light-txt{
+            margin: 0 0 5px 0;
+        }
+    }
+}

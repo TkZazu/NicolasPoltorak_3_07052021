@@ -19,6 +19,7 @@ header {
   left: 0;
   height: 60px;
   width: 100%;
+  z-index: 1;
 }
 header .logo {
   display: flex;
@@ -163,7 +164,7 @@ header .logo .logo_img {
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 25px;
+  right: 20px;
   top: 15px;
   background-color: #99E2D0;
   color: #008766;
@@ -199,6 +200,42 @@ header .logo .logo_img {
   font-family: "roboto-light";
   margin-top: 0;
   margin-left: 5px;
+}
+
+.footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 20px 20px 40px 20px;
+}
+.footer .logo {
+  margin-bottom: 10px;
+  color: white;
+}
+.footer .logo .img {
+  width: 100px;
+  height: 15px;
+}
+.footer .bolder {
+  display: flex;
+  align-items: center;
+}
+.footer .bolder .fa-utensils {
+  width: 15px;
+}
+.footer .bolder .bolder-txt {
+  font-family: "roboto-light";
+  font-size: 14px;
+  margin: 5px 10px;
+  font-weight: bold;
+}
+.footer .light {
+  font-family: "roboto-light";
+  font-size: 14px;
+}
+.footer .light .light-txt {
+  margin: 0 0 5px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
