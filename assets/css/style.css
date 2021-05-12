@@ -304,6 +304,7 @@ header .logo .fas {
 .main2 .fond-page {
   width: 100%;
   height: 250px;
+  object-fit: cover;
 }
 .main2 .p2 {
   background-color: #f6f6f6;
