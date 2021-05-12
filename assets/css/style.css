@@ -266,6 +266,13 @@ header .logo .fas {
   font-size: 14px;
   margin: 0 0 5px 0;
 }
+.footer .light .light-txt .lien {
+  color: white;
+  text-decoration: none;
+}
+.footer .light .light-txt .lien:hover {
+  color: #99E2D0;
+}
 .footer .light .light-txt:hover {
   color: #99E2D0;
   cursor: pointer;
@@ -298,15 +305,15 @@ header .logo .fas {
   top: 20px;
 }
 
-.main2 {
+.main {
   position: relative;
 }
-.main2 .fond-page {
+.main .fond-page {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
-.main2 .p2 {
+.main .p2 {
   background-color: #f6f6f6;
   position: absolute;
   width: 100%;
@@ -314,35 +321,35 @@ header .logo .fas {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
-.main2 .p2 .p2-title {
+.main .p2 .p2-title {
   display: flex;
   align-items: center;
 }
-.main2 .p2 .p2-title .title-p2 {
+.main .p2 .p2-title .title-p2 {
   font-family: "shrikhand";
   font-size: 28px;
   font-weight: 100;
   margin: 25px 35px 15px 20px;
 }
-.main2 .p2 .p2-title .far {
+.main .p2 .p2-title .far {
   color: #969696;
   margin-top: 5px;
 }
-.main2 .p2 .p2-title .heart-size {
+.main .p2 .p2-title .heart-size {
   font-size: 0.5rem;
 }
-.main2 .p2 .type-plat {
+.main .p2 .type-plat {
   font-family: "roboto-light";
   margin-bottom: 3px;
   margin-left: 20px;
 }
-.main2 .p2 .border-bottom {
+.main .p2 .border-bottom {
   height: 2px;
   width: 40px;
   background-color: #99E2D0;
   margin-left: 20px;
 }
-.main2 .p2 .menu-p2 {
+.main .p2 .menu-p2 {
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -352,14 +359,14 @@ header .logo .fas {
   position: relative;
   background-color: white;
 }
-.main2 .p2 .menu-p2 .price {
+.main .p2 .menu-p2 .price {
   position: absolute;
   right: 15px;
   bottom: 0;
   font-family: "roboto";
   font-size: 14px;
 }
-.main2 .p2 .menu-p2 .restaurant-p {
+.main .p2 .menu-p2 .restaurant-p {
   font-family: "roboto";
   font-size: 18px;
   margin-bottom: 0;
@@ -367,9 +374,9 @@ header .logo .fas {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  width: 250px;
+  width: 80%;
 }
-.main2 .p2 .menu-p2 .restaurant-txt {
+.main .p2 .menu-p2 .restaurant-txt {
   font-family: "roboto-light";
   font-size: 14px;
   margin-top: 5px;
@@ -377,14 +384,14 @@ header .logo .fas {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  width: 250px;
+  width: 80%;
 }
-.main2 .p2 .button {
+.main .p2 .button {
   display: flex;
   justify-content: center;
   margin: 40px 0;
 }
-.main2 .p2 .button .btn {
+.main .p2 .button .btn {
   background: linear-gradient(350deg, #9356DC, #FF79DA);
   padding: 15px 40px;
   color: white;
@@ -394,57 +401,7 @@ header .logo .fas {
   font-size: 14px;
   font-weight: bold;
 }
-.main2 .p2 .button .btn:hover {
-  cursor: pointer;
-}
-.main2 .footer2 {
-  background-color: #353535;
-  display: flex;
-  flex-direction: column;
-  color: white;
-  position: absolute;
-  top: 1415px;
-  width: 100%;
-}
-.main2 .footer2 .logo {
-  color: white;
-  padding: 20px;
-}
-.main2 .footer2 .logo .img {
-  width: 100px;
-  height: 15px;
-  filter: invert(100%);
-  -webkit-filter: invert(100%);
-}
-.main2 .footer2 .bolder {
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-}
-.main2 .footer2 .bolder .fa-utensils {
-  width: 15px;
-}
-.main2 .footer2 .bolder .bolder-txt {
-  font-family: "roboto-light";
-  font-size: 14px;
-  margin: 5px 10px;
-  font-weight: bold;
-}
-.main2 .footer2 .bolder .bolder-txt:hover {
-  color: #9356DC;
-  cursor: pointer;
-}
-.main2 .footer2 .light {
-  width: 110px;
-  padding: 0 20px 30px 20px;
-}
-.main2 .footer2 .light .light-txt {
-  font-family: "roboto-light";
-  font-size: 14px;
-  margin: 0 0 5px 0;
-}
-.main2 .footer2 .light .light-txt:hover {
-  color: #99E2D0;
+.main .p2 .button .btn:hover {
   cursor: pointer;
 }
 
