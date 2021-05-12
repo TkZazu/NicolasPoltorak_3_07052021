@@ -280,16 +280,16 @@ header{
             font-family: "roboto-light";
             font-size: 14px;
             margin: 0 0 5px 0;
+            &:hover{
+                color: $tertiary;
+                cursor: pointer;
+            }
             .lien{
                 color: white;
                 text-decoration: none;
                 &:hover{
                     color: $tertiary;
                 }
-            }
-            &:hover{
-                color: $tertiary;
-                cursor: pointer;
             }
         }
     }
@@ -312,6 +312,7 @@ header{
     font-family: "roboto";
     font-size: 14px
 }
+/* *********************************** header avec retour arrière ***************************** */
 .header2{
     display: flex;
     justify-content: center;
@@ -337,6 +338,7 @@ header{
         }
     }
 }
+/* ************************************* corps de la page ********************************** */
 .main{
     position: relative;
     .fond-page{
@@ -368,17 +370,20 @@ header{
                 font-size: 0.5rem;
             }
         }
+        /* ****************** Entrée, plat, déssert ***************** */
         .type-plat{
             font-family: "roboto-light";
             margin-bottom: 3px;
             margin-left: 20px;
         }
+        /* ********************** bordure verte ********************* */
         .border-bottom{
             height: 2px;
             width: 40px;
             background-color: $tertiary;
             margin-left: 20px;
         }
+        /* ******************* vignette menu ************************ */
         .menu-p2{
             @include menu-p2;
             .price{
@@ -405,6 +410,7 @@ header{
                 width: 80%;
             }
         }
+        /* ********************** boutton commander ****************** */
         .button{
             display: flex;
             justify-content: center;

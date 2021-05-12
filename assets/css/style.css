@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ********************************* variable couleurs **************************************** */
 /* ********************************* mixin ombre de box **************************************  */
 /* ********************************* mixin bouton menu **************************************** */
@@ -266,6 +267,10 @@ header .logo .fas {
   font-size: 14px;
   margin: 0 0 5px 0;
 }
+.footer .light .light-txt:hover {
+  color: #99E2D0;
+  cursor: pointer;
+}
 .footer .light .light-txt .lien {
   color: white;
   text-decoration: none;
@@ -273,12 +278,9 @@ header .logo .fas {
 .footer .light .light-txt .lien:hover {
   color: #99E2D0;
 }
-.footer .light .light-txt:hover {
-  color: #99E2D0;
-  cursor: pointer;
-}
 
 /* ************************************ pages annexes **************************************** */
+/* *********************************** header avec retour arrière ***************************** */
 .header2 {
   display: flex;
   justify-content: center;
@@ -305,6 +307,7 @@ header .logo .fas {
   top: 20px;
 }
 
+/* ************************************* corps de la page ********************************** */
 .main {
   position: relative;
 }
@@ -320,6 +323,10 @@ header .logo .fas {
   top: 200px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+  /* ****************** Entrée, plat, déssert ***************** */
+  /* ********************** bordure verte ********************* */
+  /* ******************* vignette menu ************************ */
+  /* ********************** boutton commander ****************** */
 }
 .main .p2 .p2-title {
   display: flex;
