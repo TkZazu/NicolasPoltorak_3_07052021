@@ -1,14 +1,15 @@
+/* ********************************* variable couleurs **************************************** */
 $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
 $primaryback: #f6f6f6;
 $secondaryback: #eaeaea;
-
+/* ********************************* mixin ombre de box **************************************  */
 @mixin shadowbox{
     border: 0px transparent solid;
     box-shadow: 3px 3px 8px #e0e0e0,-1px -1px 10px #f1f1f1;
 }
-
+/* ********************************* mixin bouton menu **************************************** */
 @mixin menu{
     display: flex;
     flex-direction: column;
@@ -19,6 +20,7 @@ $secondaryback: #eaeaea;
     height: 250px;
     position: relative;
 }
+/* ********************************* mixin vignette restaurant ******************************** */
 @mixin nouveau{
     position: absolute;
             display: flex;
@@ -35,7 +37,7 @@ $secondaryback: #eaeaea;
             padding: 3px 15px;
             border-radius: 3px;
 }
-
+/* ******************************** mixin coeur favoris *************************************** */
 @mixin favorite{
         position: absolute;
         display: flex;
@@ -46,7 +48,7 @@ $secondaryback: #eaeaea;
         color: #969696;
         font-size: 14px;
 }
-
+/* **************************** mixin titre vignette restaurant ******************************* */
 @mixin titre{
     font-family: "roboto";
     font-size: 20px;
@@ -62,7 +64,7 @@ $secondaryback: #eaeaea;
     font-family: "roboto-light";
     src: url("../font/Roboto-Light.ttf")
 }
-
+/* ************************************* header *********************************************** */
 body{
     margin: 0;
 }
@@ -80,13 +82,18 @@ header{
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 100%;
         .logo_img{
             width: 150px;
-            margin: 15px 0;
+        }
+        .fas{
+            position: absolute;
+            left: 25px;
+            top: 20px;
         }
     }
 }
-
+/* ************************************** localisation **************************************** */
 .info{
     .en-tete{
         background-color: $primaryback;
@@ -108,6 +115,7 @@ header{
         }
         .location_txt{
             font-family: "roboto-light";
+            font-weight: bold;
         }
     }
     .description{
@@ -122,6 +130,7 @@ header{
         }
         .title-p{
             margin: 0 0 25px 0;
+            padding: 0 10px;
             font-family: "roboto-light";
             color: #353535
         }
@@ -132,11 +141,14 @@ header{
         color: white;
         @include shadowbox;
         border-radius: 25px;
-        font-size: 18px;
-        text-shadow:  3px 3px 8px #e0e0e0;
+        font-size: 16px;
+        font-weight: bold;
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
-
+/* ************************************** Foncionnement *****************************************/
 .fonctionnement{
     display: flex;
     flex-direction: column;
@@ -153,22 +165,23 @@ header{
         border-radius: 15px;
         background-color: $primaryback;
         margin: 0 20px 25px 20px;
-            .div-number{
-                position: absolute;
-                left: -10px;
-                    .number{
-                        background-color: $primary;
-                        color: white;
-                        border-radius: 50%;
-                        width: 20px;
-                        height: 20px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-family: "roboto-light";
-                        font-size: 12px;
-                    }
-            }
+        padding: 10px 0;
+        .div-number{
+            position: absolute;
+            left: -10px;
+                .number{
+                    background-color: $primary;
+                    color: white;
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: "roboto-light";
+                    font-size: 12px;
+                }
+        }
             
         .fas{
             color: #7e7e7e;
@@ -189,7 +202,7 @@ header{
         }
     }
 }
-
+/* ************************************ vignette menu ***************************************** */
 .restaurants{
     background-color: $primaryback;
     width: 100%;
@@ -226,7 +239,7 @@ header{
         margin-left: 5px;
     }
 }
-
+/* ************************************ footer ************************************************ */
 .footer{
     background-color: #353535;
     display: flex;
@@ -239,6 +252,8 @@ header{
         .img{
             width: 100px;
             height: 15px;
+            filter: invert(100%);
+            -webkit-filter: invert(100%);
         }
     }
     
@@ -253,13 +268,203 @@ header{
             font-size: 14px;
             margin: 5px 10px;
             font-weight: bold;
+            &:hover{
+                color: $primary;
+                cursor: pointer;
+            }
         }
     }
     .light{
-        font-family: "roboto-light";
-        font-size: 14px;
+        width: 110px;
         .light-txt{
+            font-family: "roboto-light";
+            font-size: 14px;
             margin: 0 0 5px 0;
+            &:hover{
+                color: $tertiary;
+                cursor: pointer;
+            }
         }
     }
 }
+/* ************************************ pages annexes **************************************** */
+@mixin menu-p2{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        @include shadowbox;
+        border-radius: 20px;
+        position: relative;
+        background-color: white;
+}
+
+@mixin price{
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    font-family: "roboto";
+    font-size: 14px
+}
+.header2{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    z-index: 1;
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        .logo_img{
+            width: 150px;
+        }
+        .fas{
+            position: absolute;
+            left: 25px;
+            top: 20px;
+        }
+    }
+}
+.main2{
+    position: relative;
+    .fond-page{
+        width: 100%;
+        height: 250px;
+    }
+    .p2{
+        background-color: #f6f6f6;
+        position: absolute;
+        width: 100%;
+        top: 200px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        .p2-title{
+            display: flex;
+            align-items: center;
+            .title-p2{
+                font-family: "shrikhand";
+                font-size: 28px;
+                font-weight: 100;
+                    margin: 25px 35px 15px 20px;
+            }
+            .far{
+                color: #969696;
+                margin-top: 5px;
+            }
+            .heart-size{
+                font-size: 0.5rem;
+            }
+        }
+        .type-plat{
+            font-family: "roboto-light";
+            margin-bottom: 3px;
+            margin-left: 20px;
+        }
+        .border-bottom{
+            height: 2px;
+            width: 40px;
+            background-color: $tertiary;
+            margin-left: 20px;
+        }
+        .menu-p2{
+            @include menu-p2;
+            .price{
+                @include price;
+            }
+            .restaurant-p{
+                font-family: "roboto";
+                font-size: 18px;
+                margin-bottom: 0;
+                margin-left: 10px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 250px;
+            }
+            .restaurant-txt{
+                font-family: "roboto-light";
+                font-size: 14px;
+                margin-top: 5px;
+                margin-left: 10px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 250px;
+            }
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            .btn{
+                background: linear-gradient(350deg,$primary,$secondary);
+                padding: 15px 40px;
+                color: white;
+                @include shadowbox;
+                border-radius: 25px;
+                font-size: 14px;
+                font-weight: bold;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        } 
+    }
+    .footer2{
+        background-color: #353535;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        position: absolute;
+        top: 1415px;
+        width: 100%;
+        .logo{
+            color: white;
+            padding: 20px;
+            .img{
+                width: 100px;
+                height: 15px;
+                filter: invert(100%);
+                -webkit-filter: invert(100%);
+            }
+        }
+        
+        .bolder{
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            .fa-utensils{
+                width: 15px;
+            }
+            .bolder-txt{
+                font-family: "roboto-light";
+                font-size: 14px;
+                margin: 5px 10px;
+                font-weight: bold;
+                &:hover{
+                    color: $primary;
+                    cursor: pointer;
+                }
+            }
+        }
+        .light{
+            width: 110px;
+            padding: 0 20px 30px 20px;
+            .light-txt{
+                font-family: "roboto-light";
+                font-size: 14px;
+                margin: 0 0 5px 0;
+                &:hover{
+                    color: $tertiary;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
