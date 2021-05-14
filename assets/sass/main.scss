@@ -328,14 +328,6 @@ header{
     width: 80px;
 }
 
-@-webkit-keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
 /* *********************************** header avec retour arrière ***************************** */
 .header2{
     display: flex;
@@ -410,7 +402,6 @@ header{
         /* ******************* vignette menu ************************ */
         .menu-p2{
             @include menu-p2;
-            -webkit-animation: fadein 2s;
             &:hover{
                 cursor: pointer;
                 &:hover > .check{
@@ -482,3 +473,42 @@ header{
     }
 }
 
+/* ************************ responsive *************************************** */
+@media screen and (min-width: 426px){
+    .fonctionnement{
+        align-items: center;
+        .nav{
+            width: 350px;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .restaurants{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .restaurant-titre{
+            width: 100%;
+        }
+        .menu{
+            width: 43%;
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .fonctionnement{
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        .fonctionnement-titre{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .nav{
+            width: 29%;
+        }
+    }
+}
