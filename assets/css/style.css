@@ -486,6 +486,23 @@ header .logo .fas {
   .fonctionnement .nav {
     width: 29%;
   }
+
+  .main .p2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main .p2 .p2-title {
+    width: 100%;
+  }
+  .main .p2 .menu-responsive {
+    width: 33%;
+  }
+  .main .p2 .footer-responsive {
+    width: 100%;
+  }
+  .main .p2 .button {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -511,4 +511,23 @@ header{
             width: 29%;
         }
     }
+    .main{
+        .p2{
+            display: flex;
+            flex-wrap: wrap;
+            .p2-title{
+                width: 100%;
+            }
+            .menu-responsive{
+                width: 33%;
+            }
+            .footer-responsive{
+                width: 100%;
+            }
+            .button{
+                width: 100%;
+            }
+        }
+    }
+    
 }
