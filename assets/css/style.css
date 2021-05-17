@@ -97,6 +97,8 @@ header .logo .fas {
 }
 .info button:hover {
   cursor: pointer;
+  box-shadow: 5px 5px 8px #cacaca, -3px -3px 10px #cacaca;
+  opacity: 0.9;
 }
 
 /* ************************************** Foncionnement *****************************************/
@@ -206,6 +208,20 @@ header .logo .fas {
   bottom: 25px;
   color: #969696;
   font-size: 14px;
+}
+.restaurants .menu .fav-anim {
+  position: absolute;
+  bottom: 27px;
+  right: 26px;
+  width: 25px;
+  height: 25px;
+  filter: invert(85%) sepia(97%) saturate(4127%) hue-rotate(183deg) brightness(124%) contrast(89%);
+}
+.restaurants .menu .fav-anim:active {
+  bottom: 24px;
+  right: 23px;
+  width: 32px;
+  height: 32px;
 }
 .restaurants .restaurant-titre {
   font-family: "roboto";
@@ -355,6 +371,16 @@ header .logo .fas {
   background-color: #99E2D0;
   margin-left: 20px;
 }
+@keyframes menu-p2-transition {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .main .p2 .menu-p2 {
   display: flex;
   flex-direction: column;
@@ -365,6 +391,19 @@ header .logo .fas {
   position: relative;
   background-color: white;
   overflow: hidden;
+  opacity: 0;
+}
+.main .p2 .menu-p2:nth-child(2) {
+  animation: 1000ms ease-in menu-p2-transition;
+  animation-fill-mode: forwards;
+}
+.main .p2 .menu-p2:nth-child(3) {
+  animation: 1000ms ease-in 200ms menu-p2-transition;
+  animation-fill-mode: forwards;
+}
+.main .p2 .menu-p2:nth-child(4) {
+  animation: 1000ms ease-in 400ms menu-p2-transition;
+  animation-fill-mode: forwards;
 }
 .main .p2 .menu-p2:hover {
   cursor: pointer;
@@ -379,6 +418,18 @@ header .logo .fas {
   width: 60%;
 }
 .main .p2 .menu-p2:hover:hover > .check > .fas {
+  transform: rotate(0);
+}
+.main .p2 .menu-p2:active .check {
+  right: 0px;
+}
+.main .p2 .menu-p2:active .price {
+  right: 60px;
+}
+.main .p2 .menu-p2:active .restaurant-txt, .main .p2 .menu-p2:active .restaurant-p {
+  width: 60%;
+}
+.main .p2 .menu-p2:active .check > .fas {
   transform: rotate(0);
 }
 .main .p2 .menu-p2 .check {
@@ -437,7 +488,8 @@ header .logo .fas {
   margin: 40px 0;
 }
 .main .p2 .button .btn {
-  background: linear-gradient(350deg, #9356DC, #FF79DA);
+  opacity: 1;
+  background-image: linear-gradient(350deg, #9356DC, #FF79DA);
   padding: 15px 40px;
   color: white;
   border: 0px transparent solid;
@@ -445,9 +497,12 @@ header .logo .fas {
   border-radius: 25px;
   font-size: 14px;
   font-weight: bold;
+  transition: all 200ms ease-in;
 }
 .main .p2 .button .btn:hover {
   cursor: pointer;
+  box-shadow: 5px 5px 8px #cacaca, -3px -3px 10px #cacaca;
+  opacity: 0.9;
 }
 
 /* ************************ responsive *************************************** */

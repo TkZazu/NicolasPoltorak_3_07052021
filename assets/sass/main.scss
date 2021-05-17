@@ -145,6 +145,8 @@ header{
         font-weight: bold;
         &:hover{
             cursor: pointer;
+            box-shadow: 5px 5px 8px #cacaca, -3px -3px 10px #cacaca;
+            opacity: 0.9;
         }
     }
 }
@@ -222,6 +224,20 @@ header{
         }
         .favorite{
             @include favorite;
+        }
+        .fav-anim{
+            position: absolute;
+            bottom: 27px;
+            right: 26px;
+            width: 25px;
+            height: 25px;
+            filter: invert(85%) sepia(97%) saturate(4127%) hue-rotate(183deg) brightness(124%) contrast(89%);
+            &:active{
+                bottom: 24px;
+                right: 23px;
+                width: 32px;
+                height: 32px;
+            }
         }
     }
     .restaurant-titre{
@@ -303,6 +319,7 @@ header{
         position: relative;
         background-color: white;
         overflow: hidden;
+        opacity: 0;
 }
 
 @mixin price{
@@ -400,8 +417,30 @@ header{
             margin-left: 20px;
         }
         /* ******************* vignette menu ************************ */
+        @keyframes menu-p2-transition{
+            0%{
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
         .menu-p2{
             @include menu-p2;
+            &:nth-child(2){
+                animation: 1000ms ease-in menu-p2-transition;
+                animation-fill-mode: forwards;
+            }
+            &:nth-child(3){
+                animation: 1000ms ease-in 200ms menu-p2-transition;
+                animation-fill-mode: forwards;
+            }
+            &:nth-child(4){
+                animation: 1000ms ease-in 400ms menu-p2-transition;
+                animation-fill-mode: forwards;
+            }
             &:hover{
                 cursor: pointer;
                 &:hover > .check{
@@ -414,6 +453,20 @@ header{
                     width: 60%
                 }
                 &:hover > .check > .fas{
+                    transform: rotate(0); 
+                }
+            }
+            &:active{
+                .check{
+                    right : 0px;
+                }
+                .price{
+                    right: 60px
+                }
+                .restaurant-txt, .restaurant-p{
+                    width: 60%
+                }
+                .check > .fas{
                     transform: rotate(0); 
                 }
             }
@@ -458,15 +511,19 @@ header{
             justify-content: center;
             margin: 40px 0;
             .btn{
-                background: linear-gradient(350deg,$primary,$secondary);
+                opacity: 1;
+                background-image: linear-gradient(350deg,$primary,$secondary);
                 padding: 15px 40px;
                 color: white;
                 @include shadowbox;
                 border-radius: 25px;
                 font-size: 14px;
                 font-weight: bold;
+                transition: all 200ms ease-in;
                 &:hover{
                     cursor: pointer;
+                    box-shadow: 5px 5px 8px #cacaca, -3px -3px 10px #cacaca;
+                    opacity: 0.9;
                 }
             }
         } 
