@@ -211,17 +211,12 @@ header .logo .fas {
 }
 .restaurants .menu .fav-anim {
   position: absolute;
-  bottom: 27px;
-  right: 26px;
-  width: 25px;
-  height: 25px;
-  filter: invert(85%) sepia(97%) saturate(4127%) hue-rotate(183deg) brightness(124%) contrast(89%);
+  bottom: 24px;
+  right: 23px;
 }
 .restaurants .menu .fav-anim:active {
   bottom: 24px;
   right: 23px;
-  width: 32px;
-  height: 32px;
 }
 .restaurants .restaurant-titre {
   font-family: "roboto";
@@ -292,6 +287,59 @@ header .logo .fas {
 }
 .footer .light .light-txt .lien:hover {
   color: #99E2D0;
+}
+
+.loader {
+  border: 10px solid #F3F3F3;
+  border-top: 10px solid #9356DC;
+  border-bottom: 10px solid #FF79DA;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-animation: spin 2s linear, opacity 3s ease;
+  -o-animation: spin 2s linear, opacity 3s ease;
+  animation: spin 2s linear, opacity 3s ease;
+  animation-fill-mode: forwards;
+  /*  placement milieu de page */
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* animation loader */
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes main1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.main1 {
+  opacity: 0;
+  animation: 1000ms ease-in main1 1.5s;
+  animation-fill-mode: forwards;
 }
 
 /* ************************************ pages annexes **************************************** */
