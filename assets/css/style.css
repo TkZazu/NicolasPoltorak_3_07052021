@@ -211,8 +211,10 @@ header .logo .fas {
 }
 .restaurants .menu .fav-anim {
   position: absolute;
-  bottom: 24px;
-  right: 23px;
+  bottom: 26px;
+  right: 25px;
+  width: 28px;
+  height: 28px;
 }
 .restaurants .menu .fav-anim:active {
   bottom: 24px;
@@ -296,7 +298,7 @@ header .logo .fas {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  -webkit-animation: spin 2s linear, opacity 3s ease;
+  -webkit-animation: spin 2s linear, opacity 3s;
   -o-animation: spin 2s linear, opacity 3s ease;
   animation: spin 2s linear, opacity 3s ease;
   animation-fill-mode: forwards;
