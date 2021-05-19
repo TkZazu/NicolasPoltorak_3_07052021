@@ -39,12 +39,6 @@ $secondaryback: #eaeaea;
 }
 /* ******************************** mixin coeur favoris *************************************** */
 @mixin favorite{
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        right: 25px;
-        bottom: 25px;
         color: #969696;
         font-size: 14px;
 }
@@ -222,42 +216,47 @@ header{
         .new{
             @include nouveau;
         }
-        .favorite{
-            @include favorite;
-        }
-        .fav-anim{
+        .placement-fav{
+            position: absolute;
             display: flex;
             justify-content: center;
             align-items: center;
-            position: absolute;
-            bottom: 22px;
             right: 25px;
-            opacity: 0;
-            height: 28px;
-            width: 28px;
-            .fas{
-                background-image : linear-gradient(180deg,$primary,$secondary);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                font-size: 4px;
+            bottom: 25px;
+            .favorite{
+                @include favorite;
             }
-            &:active{
-                animation: 500ms ease-in coeur;
-                animation-fill-mode: forwards;
+            .fav-anim{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                opacity: 0;
+                height: 28px;
+                width: 28px;
+                transform-origin: center bottom;
+                .fas{
+                    background-image : linear-gradient(180deg,$primary,$secondary);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    font-size: 28px;
+                }
+                &:active{
+                    animation: 500ms ease-in coeur;
+                    animation-fill-mode: forwards;
+                }
             }
         }
 
         @keyframes coeur{
             0%{
                 opacity: 0;
-                transform-origin: center center;
                 transform:scale(0)
             }
             100%{
                 opacity: 1;
-                transform-origin: center center;
-                transform:scale(7)
+                transform:scale(1)
             }
         }
     }
@@ -466,32 +465,38 @@ header{
                 font-weight: 100;
                     margin: 25px 35px 15px 20px;
             }
-            .far{
-                color: #969696;
-                margin-top: 5px;
-            }
-            .heart-size{
-                position: absolute;
-                right: 25px;
-                top: 21px;
-                height: 22px;
-                width: 24px;
-            }
-            .fav-anim2{
+            .placement-fav{
                 position: absolute;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                right: 24px;
-                top: 21px;
-                height: 22px;
-                width: 24px;
-                font-size: 4px;
-                background-image : linear-gradient(180deg,$primary,$secondary);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
+                right: 25px;
+                top: 25px;
+                .heart-size{
+                    height: 28px;
+                    width: 28px;
+                    font-size: 14px;
+                    .far{
+                        color: #969696;
+                    }
+                }
+            }
+            .fav-anim2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
                 opacity: 0;
+                height: 28px;
+                width: 28px;
+                transform-origin: center bottom;
+                .fas{
+                    background-image : linear-gradient(180deg,$primary,$secondary);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    font-size: 28px;
+                }
                 &:active{
                     animation: 500ms ease-in coeur;
                     animation-fill-mode: forwards;
