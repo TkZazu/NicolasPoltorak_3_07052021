@@ -637,7 +637,7 @@ header .logo .fas {
     width: 43%;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   .fonctionnement {
     flex-wrap: wrap;
     flex-direction: row;
