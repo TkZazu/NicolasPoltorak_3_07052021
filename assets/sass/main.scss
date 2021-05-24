@@ -244,7 +244,6 @@ header{
                 .fas{
                     background-image : linear-gradient(180deg,$primary,$secondary);
                     -webkit-background-clip: text;
-                    background-clip: text;
                     color: transparent;
                     font-size: 28px;
                 }
@@ -295,7 +294,6 @@ header{
         .img{
             width: 100px;
             filter: invert(100%);
-            -webkit-filter: invert(100%);
         }
     }
     
@@ -344,8 +342,6 @@ header{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    -webkit-animation: spin 2s linear, opacity 3s;
-    -o-animation: spin 2s linear, opacity 3s ease;
     animation: spin 2s linear, opacity 3s ease;
     animation-fill-mode: forwards;
     /*  placement milieu de page */
@@ -355,22 +351,14 @@ header{
 }
 
 /* animation loader */
-@-webkit-keyframes spin{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
 @keyframes spin{
     0%{
         opacity: 1;
-        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100%{
         opacity: 0;
-        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 @keyframes main1{
@@ -501,7 +489,6 @@ header{
                 .fas{
                     background-image : linear-gradient(180deg,$primary,$secondary);
                     -webkit-background-clip: text;
-                    background-clip: text;
                     color: transparent;
                     font-size: 28px;
                 }
