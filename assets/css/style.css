@@ -154,6 +154,7 @@ header .logo .fas {
 .fonctionnement .nav .nav-p {
   font-family: "roboto";
   font-size: 16px;
+  font-weight: bold;
 }
 .fonctionnement .nav-pink {
   background-color: #f5edff;
@@ -253,6 +254,7 @@ header .logo .fas {
 }
 .restaurants .restaurant-p {
   font-family: "roboto";
+  font-weight: bold;
   font-size: 16px;
   margin-bottom: 0;
   margin-left: 5px;
@@ -569,6 +571,7 @@ header .logo .fas {
 .main .p2 .menu-p2 .restaurant-p {
   font-family: "roboto";
   font-size: 18px;
+  font-weight: bold;
   margin-bottom: 0;
   margin-left: 10px;
   text-overflow: ellipsis;
