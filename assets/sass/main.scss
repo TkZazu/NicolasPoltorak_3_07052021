@@ -549,6 +549,10 @@ header{
                 animation: 1000ms ease-in 400ms menu-p2-transition;
                 animation-fill-mode: forwards;
             }
+            &:nth-child(5){
+                animation: 1000ms ease-in 400ms menu-p2-transition;
+                animation-fill-mode: forwards;
+            }
             &:hover{
                 cursor: pointer;
                 &:hover > .check{

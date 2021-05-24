@@ -513,6 +513,10 @@ header .logo .fas {
   animation: 1000ms ease-in 400ms menu-p2-transition;
   animation-fill-mode: forwards;
 }
+.main .p2 .menu-p2:nth-child(5) {
+  animation: 1000ms ease-in 400ms menu-p2-transition;
+  animation-fill-mode: forwards;
+}
 .main .p2 .menu-p2:hover {
   cursor: pointer;
 }
